@@ -14,3 +14,13 @@
  *= require_tree .
  *= require_self
  */
+ 
+.wday-0 {
+  color: red;
+}
+.wday-6 {
+   color: blue;
+}
+.past {
+  color: gray;
+}
