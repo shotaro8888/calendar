@@ -19,8 +19,12 @@
   color: red;
 }
 .wday-6 {
-   color: blue;
+  color: blue;
 }
 .past {
   color: gray;
 }
+.top {
+  text-align: center;
+}
+

@@ -1,24 +1,21 @@
-<%= form_with(model: @blog, local: true) do |form| %>
+<p id="notice"><%= notice %></p>
+<div class="show">
+<p>
+  <strong>タイトル</strong>
+  <%= @blog.title %>
+</p>
 
-  <div class="title">
-    <div class="form-tag">タイトル</div>
-    <%= form.text_field :title %>
-  </div>
+<p>
+  <strong>内容</strong>
+  <%= @blog.content %>
+</p>
 
+<p>
+  <strong>日時</strong>
+  <%= @blog.start_time.strftime("%m-%d") %>
+</p>
 
-  <div class="content">
-    <div class="form-tag">内容</div>
-    <%= form.text_field :content %>
-  </div>
-
-    <div class="time">
-    <div class="form-tag">時間</div>
-    <%= form.datetime_select :start_time %>
-  </div>
-
-
-  <div class="submit">
-    <%= form.submit %>
-  </div>
-
-<% end %>
+<%= link_to '編集', edit_blog_path(@blog) %>
+<%= link_to '消去',blog_path(@blog.id), method: :delete, data: { confirm: '本当に?' } %>
+<%= link_to '戻る', blogs_path %>
+</div>
