@@ -36,6 +36,10 @@ class BlogsController < ApplicationController
       render 'edit'
     end
   end
+  
+  def output
+    
+  end
 
   private
 

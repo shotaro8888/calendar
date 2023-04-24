@@ -12,6 +12,32 @@
   </head>
 
   <body>
+    <div id="sp-menu">
+      <h2>MENU</h2>
+      <ul>
+        <li><%= link_to "予定を追加する", new_blog_path %></li>
+        <li><a href="#">本の感想を書く</a></li>
+        <li><a href="#">今後の予定一覧</a></li>
+      </ul>
+    </div>
+
+    <div id="hm-icon">
+      <a class="menu-trigger" href="#">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
     <%= yield %>
   </body>
 </html>
