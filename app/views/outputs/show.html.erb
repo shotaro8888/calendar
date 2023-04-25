@@ -1,0 +1,32 @@
+<div>
+  <h2>本のタイトル</h2>
+  <h3><%= @output.book_title %></h3>
+</div>
+<div>
+  <h2>今日の出来事</h2>
+  <h3><%= @output.diary %></h3>
+</div>
+<div>
+  <h2>読んだ本の感想</h2>
+  <h3><%= @output.thoughts %></h3>
+</div>
+<div>
+  <h2>明日読むページ数</h2>
+  <h3><%= @output.goal %>ページ</h3>
+</div>
+<div>
+  <h2>今日読んだ時間</h2>
+  <h3><%= @output.reading_time %>分</h3>
+</div>
+<div>
+  <h2>今日読んだページ数</h2>
+  <h3><%= @output.page %>ページ</h3>
+</div>
+<div>
+  <h2>記録日</h2>
+  <h3><%= @output.start_time %></h3>
+</div>
+
+<%= link_to '編集', edit_output_path(@output) %>
+<%= link_to '消去', output_path(@output.id), method: :delete, data: { confirm: '本当に?' } %>
+<%= link_to '戻る', outputs_path %>

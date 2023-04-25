@@ -1,0 +1,46 @@
+<%= form_with model: @output do |f| %>
+<div>
+  <p>日記か本の感想</p>
+  <%= f.collection_select :genre_id, Genre.all, :id, :genre_name , { include_blank: '選択してください'}, {class: 'form-controll', required: true } %>
+</div>
+
+<div>
+  <p>時間</p>
+  <%= f.datetime_select :start_time %>
+</div>
+
+<div>
+  <p>今日の出来事</p>
+  <%= f.text_area :diary, size: "50" %>
+</div>
+
+<div>
+  <p>本のタイトル</p>
+  <%= f.text_field :book_title %>
+</div>
+
+<div>
+  <p>読んだ本の感想</p>
+  <%= f.text_area :thoughts, size: "50" %>
+</div>
+
+<div>
+  <p>今日は何分読んだか</p>
+  <%= f.text_field :reading_time %>
+</div>
+
+<div>
+  <p>今日は何ページ読んだか</p>
+  <%= f.text_field :page %>
+</div>
+
+<div>
+  <p>明日は何ページ読むか</p>
+  <%= f.text_field :goal %>
+</div>
+<br>
+<div>
+  <%= f.submit 'アウトプット' %>
+</div>
+
+<% end %>

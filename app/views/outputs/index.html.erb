@@ -1,0 +1,6 @@
+<div>
+  <% @outputs.each do |output| %>
+    <h2><%= link_to output.genre.genre_name, output_path(output.id) %></h2>
+  <% end %>
+  <%= link_to '戻る', root_path %>
+</div>

@@ -3,6 +3,7 @@ class BlogsController < ApplicationController
   def index
     @blogs = Blog.all
     @blog = Blog.new
+    @outputs = Output.all
   end
   
   def new

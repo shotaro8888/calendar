@@ -13,11 +13,10 @@
 
   <body>
     <div id="sp-menu">
-      <h2>MENU</h2>
+      <h2><%= link_to "ホームに戻る", root_path %></h2>
       <ul>
         <li><%= link_to "予定を追加する", new_blog_path %></li>
-        <li><a href="#">本の感想を書く</a></li>
-        <li><a href="#">今後の予定一覧</a></li>
+        <li><%= link_to "本の感想を書く", new_output_path %></li>
       </ul>
     </div>
 

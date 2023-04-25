@@ -27,11 +27,14 @@ ActiveRecord::Schema.define(version: 2023_04_24_141725) do
   end
 
   create_table "outputs", force: :cascade do |t|
+    t.string "book_title"
     t.string "diary"
     t.string "thoughts"
     t.string "goal"
     t.integer "reading_time"
     t.integer "page"
+    t.datetime "start_time"
+    t.integer "genre_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
